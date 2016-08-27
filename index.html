@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>contacts application</title>
+	<!-- Meta Tags -->
+		<meta charset="utf-8"/>
+		<!-- Stylesheets -->
+		<!-- <link rel="stylesheet" href="styles/reset.css"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <!-- <link href='custom.css' rel='stylesheet' type='text/css'> -->
+		<link rel="stylesheet" href="style.css"/> 
+
+</head>
+<body>
+	
+	<div class="container">
+
+         <div class="row">
+
+             <div class="col-lg-8 col-lg-offset-2">
+
+                 <h1>Contacts</h1>
+
+                 <h3 class="lead">Add a contact</h3>
+
+
+                <form id="contact-form">
+
+    <!-- <div class="messages"></div>
+
+    <div class="controls"> -->
+
+        			<div class="row">
+            			<div class="col-md-6">
+                			<div class="form-group">
+                    			<label for="form_name">First name</label>
+                    			<input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter first name" required="required" data-error="Firstname is required.">
+                    			<div class="help-block with-errors"></div>
+                		    </div>
+            			</div>
+            			<div class="col-md-6">
+                			<div class="form-group">
+                    			<label for="form_lastname">Last name</label>
+                    			<input id="form_lastName" type="text" name="surname" class="form-control" placeholder="Please enter last name" required="required" data-error="Lastname is required.">
+                    			<div class="help-block with-errors"></div>
+                			</div>
+            			</div>
+        			</div>
+        			<div class="row">
+            			<div class="col-md-6">
+                			<div class="form-group email">
+                    			<label for="form_email">Email</label>
+                    			<input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter email" required="required" data-error="Valid email is required.">
+                    			<div class="help-block with-errors"></div>
+                            </div>
+            		    </div>
+                        <div class="col-md-6">
+                            <input type="submit" class="btn btn-success btn-send" value="Add Phone Number" id="addPhoneButton">
+                        </div>
+            			<div class="col-md-6">
+               		 		<div class="form-group">
+                    			<label for="form_phone">Phone</label>
+                    			<input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter phone">
+                    			<div class="help-block with-errors"></div>
+                		 	</div>
+            			</div>
+        			</div>
+                    <div class="col-md-12">
+                            <input type="submit" class="btn btn-success btn-send" value="Add Address" id="addAddressButton">
+                    </div>
+        			<div class="row">
+            			<div class="col-md-6">
+                			<div class="form-group address">
+                   				 <label for="form_streetAddress">Street Address</label>
+                    			<input id="form_streetAddress" type="streetAddress" name="streetAddress" class="form-control" placeholder="Please enter Street Address" required="required" data-error="Valid Street is required.">
+                    			<div class="help-block with-errors"></div>
+                			</div>
+            			</div>
+            			<div class="col-md-6">
+                			<div class="form-group city">
+                    			<label for="form_city">City and State</label>
+                    			<input id="form_city" type="city" name="city" class="form-control" placeholder="Please enter City and State" required="required" data-error="Valid City is required.">
+                    			<div class="help-block with-errors"></div>
+                			</div>
+            			</div>
+            			<div class="col-md-12">
+                			<input type="submit" class="btn btn-success btn-send" value="Add Contact" id="addButton">
+            			</div>
+        		</div>
+        			<div class="row">
+            			<div id="contactContainer" class="col-md-12">
+               				<h3>Contacts:</h3>
+            			</div>
+        			</div>
+
+      		 		<div class="row">
+            			<div id="contactInformation" class="col-md-6">
+            				<h3>Contact Information:</h3>
+            				<p id="nameInfo"></p>
+            				<p id="emailInfo"></p>
+            				<p id="phoneInfo"></p>
+            				<p id="addressInfo"></p>
+            				<p id="cityInfo"></p>
+            			</div>
+       				</div>     
+
+				</form>
+
+         	</div>
+
+    	 </div>
+
+ 	</div>
+
+		
+		<!-- JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
