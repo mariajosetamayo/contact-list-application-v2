@@ -1,4 +1,4 @@
-$(document).ready(function()){
+$(document).ready(function(){
 	
 	function Contact( firstName, lastName, email, phonesArray, addressArray, cityArray) {
 		this.firstName = firstName;
