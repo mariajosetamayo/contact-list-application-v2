@@ -11,7 +11,7 @@
 	margin-top: 15px;
 }
 
-/*#phone{
-	margin-top: 15px;
-}*/
+#contactContainer, #contactInformation{
+	display: none;
+}
 

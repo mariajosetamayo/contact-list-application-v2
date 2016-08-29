@@ -99,6 +99,8 @@ function changeContent () {
 		if(formName != "" && formLast != "" && formEmail !=""){
 			//<--* variable to create a new contact object *-->
 
+			$("#contactContainer").show()
+
 			var newContact = new Contact(formName, formLast, formEmail, newPhonesArray, newStreetArray, newCityArray);
 			// console.log("yiss", newContact)
 			
@@ -150,11 +152,12 @@ function changeContent () {
 
 	$("#contactContainer").on("click", "a",function(event){
 		event.preventDefault
+		$("#contactInformation").show()
 		console.log("ID OF ELEMENT CLICKED:" ,event.target.id)
 		document.getElementById("nameInfo").innerHTML = contactArray[event.target.id].firstName + " " + contactArray[event.target.id].lastName
 		document.getElementById("emailInfo").innerHTML = contactArray[event.target.id].email
-		document.getElementById("phoneInfo").innerHTML = "<b>" + "Phones" + "</b>" + "<br/><br/>" + contactArray[event.target.id].phone.join("<br/><br/>")
-		document.getElementById("addressInfo").innerHTML = "<b>" + "Addresses" + "</b>" + "<br/><br/>" + contactArray[event.target.id].address.map(function(item,index){return item + ", " + contactArray[event.target.id].city[index] }).join("<br/><br/>") 
+		document.getElementById("phoneInfo").innerHTML = (contactArray[event.target.id].phone[0] !== "" && contactArray[event.target.id].phone.length !== 0) ? "<b>" + "Phones" + "</b>" + "<br/>" + contactArray[event.target.id].phone.join("<br/><br/>") : ""
+		document.getElementById("addressInfo").innerHTML = (contactArray[event.target.id].address[0] !== "" && contactArray[event.target.id].address.length !== 0) ? "<b>" + "Addresses" + "</b>" + "<br/>" + contactArray[event.target.id].address.map(function(item,index){return item + ", " + contactArray[event.target.id].city[index] }).join("<br/><br/>") : ""
 		
 	});
 
