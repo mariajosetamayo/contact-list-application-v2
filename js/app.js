@@ -97,9 +97,12 @@ function changeContent () {
 		}
 		
 		if(formName != "" && formLast != "" && formEmail !=""){
-			//<--* variable to create a new contact object *-->
+			
+			//<--* to show contact information container *-->
 
 			$("#contactContainer").show()
+
+			//<--* variable to create a new contact object *-->
 
 			var newContact = new Contact(formName, formLast, formEmail, newPhonesArray, newStreetArray, newCityArray);
 			// console.log("yiss", newContact)
